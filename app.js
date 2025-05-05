@@ -24,6 +24,9 @@ function updateOrderStatus(order, status) {
 }
 
 async function processOrder(order) {
-    // TODO: Simular la preparación del pedido usando setTimeout y Promise
-    // TODO: Actualizar el estado del pedido a "Completado"
+    // Simular la preparación del pedido usando setTimeout y Promise
+    const promesa = new Promise(resolve => setTimeout(resolve, 5000)); // Simula preparación (5 segundos)
+    await promesa;
+    // Actualizar el estado del pedido a "Completado"
+    updateOrderStatus(order, "Completado");
 }
